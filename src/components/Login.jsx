@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 import axios from 'axios'
-import { Link } from 'react-router-dom'
-import { NavBar } from './NavBar'
+
 import { Addbus } from './Addbus'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [data,setdata]=useState({
@@ -19,7 +19,7 @@ const Login = () => {
                 if(response.data.status == "success"){
                     
                     alert("LOGGED IN")
-                    
+                    navigate('ad')
                 }
                 else{
                     alert("FAILED")
@@ -32,10 +32,8 @@ const Login = () => {
             }
         ).finally()
     }
-     const addbus=()=>{
-
-     }
- 
+    
+ let navigate=useNavigate()
   return (
     <div>
         <h1><center>KSRTC</center></h1>
@@ -54,7 +52,7 @@ const Login = () => {
                             <input type="password" className="form-control" name='password' value={data.password} onChange={inputhandler} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button className="btn btn-success" onClick={readValue} >LOGIN</button>
+                            <button className="btn btn-success" onClick={readValue} >Login </button>
                             
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">

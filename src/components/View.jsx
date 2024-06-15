@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Nav } from './Nav'
+
 import { NavBar } from './NavBar'
 
 export const View = () => {
