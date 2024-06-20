@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 import { NavBar } from './NavBar'
+import { Nav } from './Nav'
 
 export const View = () => {
     const [data,changeData]=useState([])
@@ -21,7 +22,7 @@ export const View = () => {
   return (
     <div>
     <h1><center>View All sign Details</center></h1>
-       <NavBar></NavBar>
+       <Nav></Nav>
         <div class="container">
        <div class="row g-3">
            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
